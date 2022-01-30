@@ -20,8 +20,6 @@ return value:
 float
 This will be a signed value for the discriminant. It may be positive or negative
 
-"""
-
 def discriminant(a,b,c):
   return None
 
@@ -33,3 +31,20 @@ def main():
   
 if __name__=="__main__:
   main()
+"""
+
+a = 1
+b = 4 
+c = 4
+import cmath 
+def discriminant(a,b,c):
+ d = (b**2) - (4*a*c)  
+ sol1 = (-b-cmath.sqrt(d))/(2*a)  
+ sol2 = (-b+cmath.sqrt(d))/(2*a)  
+ if sol1 < 0 and sol2 < 0:
+   return "no solution"
+ else:
+  return "The solution are",sol1,"and",sol2
+
+x = discriminant(a,b,c)
+print(x)
